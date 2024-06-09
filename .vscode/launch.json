@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/michellesu/Downloads/CStockProject_3/C++StockProject",
+      "program": "/Users/michellesu/Downloads/CStockProject_3/C++StockProject/build/Debug/outDebug"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+C:\Users\Yohan\Downloads\CStockProject_3\C++StockProject\x64\Debug\C++StockProject.vcxproj.AssemblyReference.cache
+C:\Users\Yohan\Downloads\CStockProject_3\C++StockProject\x64\Debug\C__StockProject.Form1.resources
+C:\Users\Yohan\Downloads\CStockProject_3\C++StockProject\x64\Debug\C__StockProject.FormMain.resources
+C:\Users\Yohan\Downloads\CStockProject_3\C++StockProject\x64\Debug\C++StockProject.vcxproj.GenerateResource.cache
+C:\Users\Yohan\Downloads\CStockProject_3\C++StockProject\x64\Debug\C++StockProject.exe

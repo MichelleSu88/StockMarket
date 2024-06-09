@@ -1,0 +1,184 @@
+  C__StockProject.Form1.resources - Embedded, ContainedInManifestFile, 
+  C__StockProject.FormMain.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly C++StockProject, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class Candlestick: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.DateTime Date : Public
+    Double Open : Public
+    Double High : Public
+    Double Low : Public
+    Double Close : Public
+    Double Volume : Public
+Class SmartCandlestick: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Candlestick
+    Void .ctor(System.DateTime, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsBearish 'get ' : 
+    Boolean IsBullish 'get ' : 
+    Double BottomWick 'get ' : 
+    Double TopWick 'get ' : 
+    Double BodyRange 'get ' : 
+    Double Range 'get ' : 
+  Methods:
+    get_Range(): PrivateScope, Public, HideBySig, SpecialName
+    get_BodyRange(): PrivateScope, Public, HideBySig, SpecialName
+    get_TopWick(): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomWick(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsBullish(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsBearish(): PrivateScope, Public, HideBySig, SpecialName
+Class PatternRecognizer: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class BearishEngulfingRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class BearishHaramiRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class BearishRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class BullishEngulfingRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class BullishHaramiRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class BullishRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PeakRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class ValleyRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class NeutralRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class MarubozuRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class DojiRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class DragonflyDojiRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class GravestoneDojiRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class HammerRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class InvertedHammerRecognizer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PatternRecognizer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    PatternName(): PrivateScope, Public, Virtual, HideBySig
+    IsPatternPresent(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    GetPatternRange(BindingList`1, Int32): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class C__StockProject.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.ComponentModel.BindingList`1[SmartCandlestick], System.DateTime, System.DateTime, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class C__StockProject.FormMain: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
